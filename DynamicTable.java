@@ -1,7 +1,7 @@
 public class DynamicTable {
     private int capacity;
     private int itemAmount;
-    private int[][] DTable;
+    public int[][] DTable;
 
     public DynamicTable(int newCapacity, int newItemAmount) {
         itemAmount = newItemAmount;
