@@ -6,7 +6,7 @@ public class DynamicTable {
     public DynamicTable(int newCapacity, int newItemAmount) {
         itemAmount = newItemAmount;
         capacity = newCapacity;
-        DTable = new int[capacity][itemAmount];
+        DTable = new int[capacity+1][itemAmount+1];
     }
 
     public void setCapacity(int newCapacity) {
