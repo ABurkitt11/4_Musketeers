@@ -24,5 +24,9 @@ public class DynamicTable
   itemAmount = newItemAmount;
  }
  
+ public int getItemAmount() {
+  return itemAmount;
+ }
+ 
 }
  
