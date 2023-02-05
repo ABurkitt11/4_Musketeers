@@ -4,50 +4,37 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-//Reads and stores the file
+//Reads and stores the file in an arraylist of Items
 public class ReadFile {
 
-    public static ArrayList<int[]> readfile(File filePath) throws FileNotFoundException {
+    public static ArrayList<Item> readfile(File filePath) throws FileNotFoundException {
         Scanner sc = new Scanner(filePath);
         int backpackSize = 0;
-        backpackSize =  sc.nextInt();
-        ArrayList<int[]> dataStorage = new ArrayList<>();
         int[] temp;
         int i = 0;
+        ArrayList<Item> dataStorage = new ArrayList<>();
 
-        dataStorage.add(new int[1]);
-        temp = dataStorage.get(i);
-        temp[i] = backpackSize;
-        dataStorage.set(i, temp);
 
+        //this is to just store the backpack capacity.
+        dataStorage.add(new Item(sc.nextInt(),0));
+
+
+
+        //This is to read the data and add it to the array list as an Item
         while (sc.hasNextInt())
         {
             i++;
-            dataStorage.add(new int[3]);
-            temp = dataStorage.get(i);
-            temp[0] = sc.nextInt();
-            temp[1] = sc.nextInt();
-            temp[2] = sc.nextInt();
-
-            dataStorage.set(i, temp);
+            sc.nextInt();
+            dataStorage.add(new Item(sc.nextInt(), sc.nextInt()));
 
         }
 
-        //Print the data to make sure it is right
-        for(int j = 1; j < dataStorage.size(); j++)
+        //Outputs the data to make sure it is right
+        for(int j = 0; j < dataStorage.size(); j++)
         {
-            temp = dataStorage.get(j);
-            System.out.print(temp[0]);
-            System.out.print(temp[1]);
-            System.out.println(temp[2]);
-
+            System.out.println("Weight: "+ dataStorage.get(j).getWeight()+ " Price: " +dataStorage.get(j).getPrice());
         }
-
-
         return dataStorage;
 
     }
-
-
 }
-
