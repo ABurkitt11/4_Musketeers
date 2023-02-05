@@ -18,7 +18,7 @@ public class Main {
         DynamicTable dynamicTable = new DynamicTable(dataStorage.remove(0).getWeight(), dataStorage.size());
         dynamicTable.buildDynamicTable(dataStorage);
 
-        //Test.testClass(dataStorage, new DynamicTable(dataStorage.size(), dataStorage.remove(0).getWeight()));
+       
 
 
 
