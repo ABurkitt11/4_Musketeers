@@ -53,12 +53,3 @@ public class DynamicTable {
 
 }
 }
-/*for(int i = 0;i < itemAmount;i ++){
-    for(int w = 0;w < capacity; w ++){
-            int t;
-            t = DTable[w][i-1].getPrice;
-            if(t < (DTable[w][i].getPrice + Dtable[itemAmount-w][i-1].getPrice)){
-                t = DTable[w][i].getPrice + Dtable[itemAmount-w][i-1].getPrice;
-            }
-            DTable[w][i] = t;
-}*/
