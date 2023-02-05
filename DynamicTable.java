@@ -9,5 +9,20 @@ public class DynamicTable
    capacity = newCapacity;
  }
  
+ 
+ public void setCapacity(int newCapacity) 
+ {
+  capacity = newCapacity;
+ }
+ 
+ public int getCapacity() {
+  return capacity;
+ }
+ 
+ public void setItemAmount(int newItemAmount) 
+ {
+  itemAmount = newItemAmount;
+ }
+ 
 }
  
