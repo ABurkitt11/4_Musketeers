@@ -10,7 +10,7 @@ public class DynamicTable {
         
         for (int i = 0; i <= itemAmount.length(); i++) {
             for (int j = 0; j <= capacity; j++) {
-                DTable[i][j] = Math.max();
+                DTable[i][j] = Math.max(DTable[i - 1][j], itemAmount[i] + DTable[i-1, j - ?]);
             }
     }
 
