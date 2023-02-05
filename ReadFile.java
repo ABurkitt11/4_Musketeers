@@ -9,9 +9,6 @@ public class ReadFile {
 
     public static ArrayList<Item> readfile(File filePath) throws FileNotFoundException {
         Scanner sc = new Scanner(filePath);
-        int backpackSize = 0;
-        int[] temp;
-        int i = 0;
         ArrayList<Item> dataStorage = new ArrayList<>();
 
 
@@ -23,7 +20,6 @@ public class ReadFile {
         //This is to read the data and add it to the array list as an Item
         while (sc.hasNextInt())
         {
-            i++;
             sc.nextInt();
             dataStorage.add(new Item(sc.nextInt(), sc.nextInt()));
 
