@@ -1,0 +1,1 @@
+knapsack backpack = new knapsack();
