@@ -9,3 +9,5 @@ public class DynamicTable
    capacity = newCapacity;
  }
  
+}
+ 
