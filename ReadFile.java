@@ -15,9 +15,14 @@ public class ReadFile {
         int[] temp;
         int i = 0;
 
+        dataStorage.add(new int[1]);
+        temp = dataStorage.get(i);
+        temp[i] = backpackSize;
+        dataStorage.set(i, temp);
 
         while (sc.hasNextInt())
         {
+            i++;
             dataStorage.add(new int[3]);
             temp = dataStorage.get(i);
             temp[0] = sc.nextInt();
@@ -25,11 +30,11 @@ public class ReadFile {
             temp[2] = sc.nextInt();
 
             dataStorage.set(i, temp);
-            i++;
+
         }
 
         //Print the data to make sure it is right
-        for(int j = 0; j < dataStorage.size(); j++)
+        for(int j = 1; j < dataStorage.size(); j++)
         {
             temp = dataStorage.get(j);
             System.out.print(temp[0]);
@@ -45,3 +50,4 @@ public class ReadFile {
 
 
 }
+
