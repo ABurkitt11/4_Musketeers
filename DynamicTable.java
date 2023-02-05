@@ -1,1 +1,5 @@
-knapsack backpack = new knapsack();
+public class DynamicTable 
+{
+ public DynamicTable(int capacity, int itemAmount) 
+ {
+   
