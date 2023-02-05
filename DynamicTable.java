@@ -7,6 +7,11 @@ public class DynamicTable {
         itemAmount = newItemAmount;
         capacity = newCapacity;
         DTable = new int[capacity+1][itemAmount+1];
+        
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= capacity; j++) {
+                DTable[i][j] = Math.max();
+            }
     }
 
     public void setCapacity(int newCapacity) {
