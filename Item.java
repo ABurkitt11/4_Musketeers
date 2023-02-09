@@ -23,15 +23,7 @@ public class Item {
     }
 
 
-    public String toString(ArrayList<Item> items)
-    {
-        for(int i = 0; i < items.size(); i++)
-        {
-            System.out.println("W: "+items.get(i).getWeight() + " P: " + items.get(i).getPrice());
-        }
-
-        return null;
-    }
+    
     public int getPrice() {
         return price;
     }
