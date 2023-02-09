@@ -49,7 +49,7 @@ public class DynamicTable {
     
     
 }
-    public void countTheMoney(ArrayList<Item> datastorage){
+    public ArrayList<Item> countTheMoney(ArrayList<Item> datastorage){
         i = itemAmount;
         k = capacity;
         ArrayList<Item> answer = new ArrayList<>();
@@ -61,5 +61,7 @@ public class DynamicTable {
             }
             else i = i-1;
         }
+        return answer;
+    }
 }
 }
