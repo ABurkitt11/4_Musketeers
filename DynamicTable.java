@@ -1,15 +1,13 @@
 import java.util.ArrayList;
 import java.math.*;
-
 public class DynamicTable {
     private int capacity;
     private int itemAmount;
     public int[][] DTable;
-
     public DynamicTable(int newCapacity, int newItemAmount) {
         itemAmount = newItemAmount;
         capacity = newCapacity;
-        DTable = new int[capacity + 1][itemAmount + 1];
+        DTable = new int[itemAmount+1][capacity+1];
 
     }
 
@@ -28,8 +26,11 @@ public class DynamicTable {
     public int getItemAmount() {
         return itemAmount;
     }
-
     public void buildDynamicTable(ArrayList<Item> datastorage) {
+
+//        for (int w = 0; w <= capacity; w++) {
+//            DTable[w][0] = 0;
+//        }
 
         for (int i = 1; i <= itemAmount; i++) {
             for (int w = 0; w <= capacity; w++) {
@@ -41,21 +42,20 @@ public class DynamicTable {
             }
         }
 
+
+        printAr(DTable);
     }
 
-    public ArrayList<Item> countTheMoney(ArrayList<Item> datastorage){
-        i = itemAmount;
-        k = capacity;
-        ArrayList<Item> answer = new ArrayList<>();
-        while (i != 0 && k != 0) {
-            if(DTable[i][k] != DTable[i-1][k]) {
-                answer.add(datastorage.get(i));
-                k = k-datastorage.get(i).getWeight();
-                i = i-1;
+    public void printAr(int [][] A)
+    {
+        for(int i = 0; i < A.length; i++)
+        {
+            for(int j = 0; j < A[i].length; j++)
+            {
+                System.out.print(A[i][j] + " ");
             }
-            else i = i-1;
+            System.out.println();
         }
-        return answer;
     }
 
 
