@@ -60,4 +60,26 @@ public class DynamicTable {
 
 
 
+    public ArrayList<Item> countTheMoney(ArrayList<Item> datastorage){
+        int i = itemAmount;
+        int k = capacity;
+        ArrayList<Item> answer = new ArrayList<>();
+
+
+        while (i != 0 && k != 0) {
+            if(DTable[i][k] != DTable[i-1][k])
+            {
+                answer.add(datastorage.get(i-1));
+                k = k - datastorage.get(i-1).getWeight();
+                i = i - 1;
+            }
+            else i = i-1;
+
+        }
+        return answer;
+    }
+
+
+
+
 }
