@@ -31,21 +31,17 @@ public class DynamicTable {
 
     public void buildDynamicTable(ArrayList<Item> datastorage) {
 
-        for (int i = 0; i <= itemAmount; i++) {
-            for (int w = 0; w <= capacity; w++) {
-                if (i == 0) {
-                    DTable[w][i] = 0;
-                } else {
-                    int t;
-                    t = DTable[w][i - 1];
-                    // ArrayList<Item> itemsUsed = new ArrayList<>();
-                    if (t < (datastorage.get(i).getPrice() + DTable[datastorage.get(i).getWeight() - w][i - 1])) {
-                        t = datastorage.get(i).getPrice() + DTable[datastorage.get(i).getWeight() - w][i - 1];
-                        // itemsUsed.add(datastorage.get(i));
-                    }
+        for (int w = 0; w <= capacity; w++) {
+        DTable[w][0] = 0; 
+        }
 
-                    DTable[w][i] = t;
+        for (int i = 1; i <= itemAmount; i++) {
+            for (int w = 0; w <= capacity; w++) {
+                int t = DTable[w][i - 1];
+                if (datastorage.get(i - 1).getWeight() <= w) {
+                    t = Math.max(t, datastorage.get(i - 1).getPrice() + DTable[w - datastorage.get(i - 1).getWeight()][i - 1]);
                 }
+                DTable[w][i] = t;
             }
         }
 
@@ -67,5 +63,5 @@ public class DynamicTable {
     }
 
 
-    
+
 }
