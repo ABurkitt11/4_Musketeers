@@ -49,7 +49,17 @@ public class DynamicTable {
     
     
 }
-    public void countTheMoney(){
-
+    public void countTheMoney(ArrayList<Item> datastorage){
+        i = itemAmount;
+        k = capacity;
+        ArrayList<Item> answer = new ArrayList<>();
+        while (i != 0 && k !!= 0) {
+            if(DTable[i][k] != DTable[i-1][k]) {
+                answer.add(datastorage.get(i));
+                k = k-datastorage.get(i).getWeight();
+                i = i-1;
+            }
+            else i = i-1;
+        }
 }
 }
