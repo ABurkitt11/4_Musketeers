@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.math.*;
 public class DynamicTable {
     private int capacity;
@@ -26,7 +29,7 @@ public class DynamicTable {
     public int getItemAmount() {
         return itemAmount;
     }
-    public void buildDynamicTable(ArrayList<Item> datastorage) {
+    public void buildDynamicTable(ArrayList<Item> datastorage) throws FileNotFoundException {
 
 //        for (int w = 0; w <= capacity; w++) {
 //            DTable[w][0] = 0;
@@ -46,16 +49,23 @@ public class DynamicTable {
         printAr(DTable);
     }
 
-    public void printAr(int [][] A)
+    public void printAr(int [][] A) throws FileNotFoundException
     {
-        for(int i = 0; i < A.length; i++)
-        {
-            for(int j = 0; j < A[i].length; j++)
-            {
-                System.out.print(A[i][j] + " ");
+    	System.out.println("\n ==============================");
+        System.out.println("Outputting DynamicTable.txt..");
+        PrintWriter pw = new PrintWriter(new File("DynamicTable.txt"));
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length; j++) {
+                pw.print(A[i][j] + " ");
             }
-            System.out.println();
+            pw.println();
         }
+        pw.close();
+        System.out.println("Done!");
+        System.out.println("End of Processing.");
+        
+        
+        
     }
 
 
