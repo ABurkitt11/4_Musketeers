@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,27 +21,13 @@ public class Main {
         dataStorage = ReadFile.readfile(f);
         System.out.println("Done!");
         System.out.println("Result:");
-
+        System.out.println("============================================");
         DynamicTable dynamicTable = new DynamicTable(dataStorage.remove(0).getWeight(), dataStorage.size());
-        
+//        System.out.println(dataStorage);
         
         
         dynamicTable.buildDynamicTable(dataStorage);
-        temp = dynamicTable.countTheMoney(dataStorage);
-
-        System.out.println("items used: ");
-        for(int i = 0; i < temp.size(); i++)
-        {
-            System.out.println("W: "+temp.get(i).getWeight() + " P: " + temp.get(i).getPrice());
-        }
-
-
-
-
-
-
-
-
+        
 
     }
 

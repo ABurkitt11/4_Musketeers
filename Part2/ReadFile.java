@@ -26,11 +26,12 @@ public class ReadFile {
         }
 
         //Outputs the data to make sure it is right
-        for(int j = 0; j < dataStorage.size(); j++)
-        {
-            System.out.println("Weight: "+ dataStorage.get(j).getWeight()+ " Price: " +dataStorage.get(j).getPrice());
-        }
+//        for(int j = 0; j < dataStorage.size(); j++)
+//        {
+//            System.out.println("Weight: "+ dataStorage.get(j).getWeight()+ " Price: " +dataStorage.get(j).getPrice());
+//        }
         return dataStorage;
 
     }
+    
 }

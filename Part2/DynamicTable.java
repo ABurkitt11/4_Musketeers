@@ -32,9 +32,6 @@ public class DynamicTable {
     }
     public void buildDynamicTable(ArrayList<Item> datastorage) throws FileNotFoundException {
 
-//        for (int w = 0; w <= capacity; w++) {
-//            DTable[w][0] = 0;
-//        }
 
     	for (int i = 1; i <= itemAmount; i++) {
     	    for (int w = 0; w <= capacity; w++) {
@@ -48,14 +45,17 @@ public class DynamicTable {
 
 
     	System.out.println("Total Value: "+DTable[itemAmount][capacity]);
-        printAr(DTable);
-//        return DTable; 
+    	countTheMoney(datastorage);
+    	printAr(DTable);
+        
+
+        
     }
 
     public void printAr(int [][] A) throws FileNotFoundException
     {
-    	System.out.println("\n ==============================");
-        System.out.println("Outputting DynamicTable.txt...");
+    	System.out.println("\n============================================");
+        System.out.println("Outputting DynamicTable.txt..");
         PrintWriter pw = new PrintWriter(new File("DynamicTable.txt"));
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[i].length; j++) {
@@ -71,9 +71,7 @@ public class DynamicTable {
         
     }
 
-
-
-    public ArrayList<Item> countTheMoney(ArrayList<Item> datastorage){
+    public void countTheMoney(ArrayList<Item> datastorage){
         int i = itemAmount;
         int k = capacity;
         ArrayList<Item> answer = new ArrayList<>();
@@ -89,7 +87,16 @@ public class DynamicTable {
             else i = i-1;
 
         }
-        return answer;
+        System.out.print("Item ID List: ");
+        for(int j = 0; j < datastorage.size(); j++)
+        {
+            for(int i1 = 0; i1 < answer.size(); i1++)
+            {
+            	if(datastorage.get(j).getWeight() == answer.get(i1).getWeight() && datastorage.get(j).getPrice()==answer.get(i1).getPrice()){
+            		 System.out.print(j+1 + " ");
+            	}
+            }
+        }
     }
 
 
