@@ -7,13 +7,12 @@ public class Main {
 
     //Sets up the file read and calls the methods
     public static void main(String args[]) throws FileNotFoundException {
-//        Scanner sc = new Scanner(System.in);
-//        File f = new File(sc.nextLine());
+        while(true){
     	Scanner sc = new Scanner(System.in);
         System.out.println("0-1 Knapsack Problem but the final item list has odd weight and even price ");
         System.out.print("Please enter the data file name: ");
         File f = new File(sc.nextLine());
-        sc.close();
+//        sc.close();
         
         System.out.println("Processing..");
         ArrayList<Item> dataStorage = new ArrayList<>();
@@ -27,7 +26,7 @@ public class Main {
         
         
         dynamicTable.buildDynamicTable(dataStorage);
-        
+        }
 
     }
 
