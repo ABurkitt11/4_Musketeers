@@ -4,11 +4,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-//Reads and stores the file in an arraylist of Items
 public class ReadFile {
     /**
      * Reads and stores the file in an arraylist of Items
-     * @Exception FileNotFoundException
+     * @throws FileNotFoundException
      */
     public static ArrayList<Item> readfile(File filePath) throws FileNotFoundException {
         Scanner sc = new Scanner(filePath);
