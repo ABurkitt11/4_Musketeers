@@ -83,10 +83,11 @@ public class DynamicTable {
         
         
     }
-    /**
-    * @param datastorage
-    * prints out the Item ID List.
-    **/
+     /**
+     * Reads through the table and produces the weight and price of the
+     * chosen items
+     * @param dataStorage arraylist that all the items provided with their weight and price
+     */
 
     public void countTheMoney(ArrayList<Item> datastorage){
         int i = itemAmount;
