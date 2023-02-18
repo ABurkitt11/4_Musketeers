@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class Main {
 
-    //Sets up the file read and calls the methods
+    /**
+     * Sets up the file read and calls the methods
+     * @throws FileNotFoundException
+     **/
     public static void main(String args[]) throws FileNotFoundException {
 //        Scanner sc = new Scanner(System.in);
 //        File f = new File(sc.nextLine());
