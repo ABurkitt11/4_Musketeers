@@ -1,3 +1,7 @@
+/**
+It holds the value of Weight and the Price
+**/
+
 import java.util.ArrayList;
 
 public class Item {
