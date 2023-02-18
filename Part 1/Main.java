@@ -15,7 +15,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("0-1 Knapsack Problem");
         System.out.print("Please enter the data file name: ");
-        File f = new File("D:\\java\\Personal Projects\\untitled3\\src\\sample.txt");
+        File f = new File(sc.nextLine());
         sc.close();
 
         System.out.println("Processing..");
@@ -26,7 +26,6 @@ public class Main {
         System.out.println("============================================");
         DynamicTable dynamicTable = new DynamicTable(dataStorage.remove(0).getWeight(), dataStorage.size());
 
-        // D:\java\Personal Projectsuntitled3\src\sample.txt
         dynamicTable.buildDynamicTable(dataStorage);
 
     }
