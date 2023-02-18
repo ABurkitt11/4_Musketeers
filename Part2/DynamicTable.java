@@ -60,7 +60,7 @@ public class DynamicTable {
         
     }
     /**
-    * @param A
+    * @param Array
     * @Exception FileNotFoundException
     * prints out the dynamic table.
     **/
