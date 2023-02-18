@@ -30,6 +30,14 @@ public class DynamicTable {
     public int getItemAmount() {
         return itemAmount;
     }
+    
+    /**
+    * Building the Dynamic Table.
+    * @param datastorage
+    * @throws FileNotFoundException
+    * Fill out the table with multiple selections of each items
+    **/
+    
     public void buildDynamicTable(ArrayList<Item> datastorage) throws FileNotFoundException {
 
 
@@ -51,6 +59,11 @@ public class DynamicTable {
 
         
     }
+    /**
+    * @param A
+    * @Exception FileNotFoundException
+    * prints out the dynamic table.
+    **/
 
     public void printAr(int [][] A) throws FileNotFoundException
     {
@@ -70,6 +83,10 @@ public class DynamicTable {
         
         
     }
+    /**
+    * @param datastorage
+    * prints out the Item ID List.
+    **/
 
     public void countTheMoney(ArrayList<Item> datastorage){
         int i = itemAmount;
