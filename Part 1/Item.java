@@ -1,5 +1,5 @@
 /**
- * A datatype that holds the item and price of an item
+ * A datatype that holds the weight and price of an item
  */
 public class Item {
 
