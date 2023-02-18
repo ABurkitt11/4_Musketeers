@@ -6,7 +6,10 @@ import java.util.Scanner;
 
 //Reads and stores the file in an arraylist of Items
 public class ReadFile {
-
+    /**
+     * Reads and stores the file in an arraylist of Items
+     * @Exception FileNotFoundException
+     */
     public static ArrayList<Item> readfile(File filePath) throws FileNotFoundException {
         Scanner sc = new Scanner(filePath);
         ArrayList<Item> dataStorage = new ArrayList<>();
@@ -25,11 +28,6 @@ public class ReadFile {
 
         }
 
-        //Outputs the data to make sure it is right
-//        for(int j = 0; j < dataStorage.size(); j++)
-//        {
-//            System.out.println("Weight: "+ dataStorage.get(j).getWeight()+ " Price: " +dataStorage.get(j).getPrice());
-//        }
         return dataStorage;
 
     }
