@@ -1,5 +1,6 @@
-import java.util.ArrayList;
-
+/**
+ * A datatype that holds the item and price of an item
+ */
 public class Item {
 
     private int weight;
@@ -10,16 +11,8 @@ public class Item {
         price = newPrice;
     }
 
-    public void setWeight(int newWeight) {
-        weight = newWeight;
-    }
-
     public int getWeight() {
         return weight;
-    }
-
-    public void setPrice(int newPrice) {
-        price = newPrice;
     }
 
     public int getPrice() {
