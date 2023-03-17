@@ -89,7 +89,7 @@ clm = [
 
 # In[69]:
 
-
+# read the dataset
 data = pd.read_csv("MushroomData_8000.txt", header=None, names=clm)
 data.shape
 
@@ -124,7 +124,7 @@ data[categorical].head()
 
 # In[74]:
 
-
+#checking if there's any null value
 data[categorical].isnull().sum()
 
 
@@ -157,7 +157,7 @@ X = X.apply(le2.fit_transform)
 
 # In[78]:
 
-
+#splititng into the training and testing dataset
 X_train, X_test, y_train, y_test = train_test_split(X,
                                                     y,
                                                     test_size=0.3,
@@ -178,21 +178,21 @@ y_test
 
 # In[81]:
 
-
-nb =NaiveBayes()
+# Calling out our Naive Bayes model
+nb = NaiveBayes()
 nb.train(X_train.values,y_train)
 
 
 # In[82]:
 
-
+# Read the unknown dataset
 unknown_data = pd.read_csv('MushroomData_Unknwon_100.txt', names=clm[1:])
 unknown_data = unknown_data.apply(le2.fit_transform)
 
 
 # In[83]:
 
-
+# Predecting the values of unknown datset
 y_pred = nb.predict(unknown_data.values)
 # print(y_pred)
 
