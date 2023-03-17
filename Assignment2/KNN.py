@@ -197,7 +197,6 @@ for k in range(1, 20):
 
 # In[194]:
 
-
 plt.plot(range(1, 20), score_list)
 plt.xlabel("Value of K")
 plt.ylabel("Accuracy ")
