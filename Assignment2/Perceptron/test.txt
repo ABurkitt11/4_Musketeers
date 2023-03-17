@@ -1,0 +1,15 @@
+x,s,n,t,p,f,c,n,k,e,e,s,s,w,w,p,w,o,p,k,s,u
+x,s,y,t,a,f,c,b,k,e,c,s,s,w,w,p,w,o,p,n,n,g
+b,s,w,t,l,f,c,b,n,e,c,s,s,w,w,p,w,o,p,n,n,m
+x,y,w,t,p,f,c,n,n,e,e,s,s,w,w,p,w,o,p,k,s,u
+x,s,g,f,n,f,w,b,k,t,e,s,s,w,w,p,w,o,e,n,a,g
+x,y,y,t,a,f,c,b,n,e,c,s,s,w,w,p,w,o,p,k,n,g
+b,s,w,t,a,f,c,b,g,e,c,s,s,w,w,p,w,o,p,k,n,m
+b,y,w,t,l,f,c,b,n,e,c,s,s,w,w,p,w,o,p,n,s,m
+x,y,w,t,p,f,c,n,p,e,e,s,s,w,w,p,w,o,p,k,v,g
+b,s,y,t,a,f,c,b,g,e,c,s,s,w,w,p,w,o,p,k,s,m
+x,y,y,t,l,f,c,b,g,e,c,s,s,w,w,p,w,o,p,n,n,g
+x,y,y,t,a,f,c,b,n,e,c,s,s,w,w,p,w,o,p,k,s,m
+b,s,y,t,a,f,c,b,w,e,c,s,s,w,w,p,w,o,p,n,s,g
+x,y,w,t,p,f,c,n,k,e,e,s,s,w,w,p,w,o,p,n,v,u
+x,f,n,f,n,f,w,b,n,t,e,s,f,w,w,p,w,o,e,k,a,g
