@@ -47,5 +47,19 @@ if __name__ == '__main__':
     perceptron = Perceptron(0.1, 2)
     perceptron.train_set(dataSet, mushroomClasses)
     test_file = input("Enter test data file name ")
-    test_data = readdata(test_file, False)
-    print(perceptron.predict(test_data))
+
+    is_Unknown = input("Does this data contain the column of edible or poisonous? (type 'yes' to remove this column for prediction, anything else to not remove the column): ")
+    
+    if is_Unknown != 'yes':
+        print("Warning: program cannot detect if 'yes' should have been supplied at this stage, results may be affected if the incorrect response was provided")
+
+    if is_Unknown == 'yes':
+        extra, test_data = readdata(test_file, True)
+    
+    else:
+        test_data = readdata(test_file, False)
+
+    #print(test_data)
+    #print(perceptron.predict(test_data))
+    with open("predictionResults.txt", "w") as file:
+        file.write(np.array_str(perceptron.predict(test_data)))
