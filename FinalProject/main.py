@@ -3,7 +3,7 @@ import numpy as np
 import pretty_midi
 
 # Set the directory where your MIDI files are stored
-midi_dir = "data/"
+midi_dir = "Data/"
 
 # Set the length of each sequence of notes and the number of sequences to generate
 seq_length = 1000
