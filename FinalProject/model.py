@@ -40,8 +40,8 @@ model.compile(loss="mse", optimizer="adam")
 
 
 # Define the number of epochs and batch size
-num_epochs = 5
-batch_size = 50
+num_epochs = 50
+batch_size = 32
 
 # Define callbacks to save the best model during training based on the validation loss
 model_checkpoint = tf.keras.callbacks.ModelCheckpoint("best_model.h5", save_best_only=True)
